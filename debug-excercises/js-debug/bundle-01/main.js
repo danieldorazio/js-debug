@@ -33,17 +33,30 @@ function loopToFive() {
         console.log(i);
     }
 }
-console.log(loopToFive);
+//funzione con ciclo for
+//errore virgola invece che punto e virgola 
 
 // ESERCIZIO 4 (suggerimento: ci sono 7 errori)
 function displayEvenNumbers() {
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
     let evenNumbers = [];
-    for (let i = 0; i < numbers.length - 1; i++;) {
-        if (numbers % 2 = 0); {
+    for (let i = 1; i <= numbers.length ; i++) {
+        if (i % 2 == 0) {
             evenNumbers.push(i);
-        }
-        return evenNumbers;
+            console.log(i);
+        }   
     }
+    return evenNumbers;
+    
 }
-displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
+
+console.log(displayEvenNumbers()); // dovrebbe restituire [2,4,6,8]
+
+//1) punto e virgola all'interno del'argomento del ciclo 
+//2) punto e virgola dopo l'argomento dell'if
+//3) mancanza del doppio uguale nell'argomento dell'if
+//4) return all'interno del ciclo for 
+//5) numbers all'interno dell'argomentoo if è sbagliato dovrebbe essere i 
+//6) il -1 nel for
+//7) l'uguale nel for 
+//8) fai partire da 1
