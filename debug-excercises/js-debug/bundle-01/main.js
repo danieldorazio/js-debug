@@ -14,7 +14,7 @@
 for (let i = 0; i > 5; i++) {
     console.log(i);
 }
-//giusto
+//errore non parte perche 0 non è maggiore di 5
 //ciclo for contatore da 0 a 5 e stampa in console 
 
 // ESERCIZIO 2
@@ -40,10 +40,9 @@ function loopToFive() {
 function displayEvenNumbers() {
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
     let evenNumbers = [];
-    for (let i = 1; i <= numbers.length ; i++) {
-        if (i % 2 == 0) {
-            evenNumbers.push(i);
-            console.log(i);
+    for (let i = 0; i < numbers.length ; i++) {
+        if (numbers[i] % 2 == 0) {
+            evenNumbers.push(numbers[i]);
         }   
     }
     return evenNumbers;
@@ -57,6 +56,5 @@ console.log(displayEvenNumbers()); // dovrebbe restituire [2,4,6,8]
 //3) mancanza del doppio uguale nell'argomento dell'if
 //4) return all'interno del ciclo for 
 //5) numbers all'interno dell'argomentoo if è sbagliato dovrebbe essere i 
-//6) il -1 nel for
-//7) l'uguale nel for 
-//8) fai partire da 1
+//6) l'uguale nel for 
+//7) fai partire da 1
