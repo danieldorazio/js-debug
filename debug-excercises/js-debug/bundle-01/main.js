@@ -29,11 +29,11 @@ function addIfEven(num) {
 
 // ESERCIZIO 3
 function loopToFive() {
-    for (let i = 0, i < 5, i++) {
+    for (let i = 0; i < 5; i++) {
         console.log(i);
     }
 }
-
+console.log(loopToFive);
 
 // ESERCIZIO 4 (suggerimento: ci sono 7 errori)
 function displayEvenNumbers() {
