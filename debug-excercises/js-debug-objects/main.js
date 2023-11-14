@@ -25,7 +25,7 @@ const cars = [
     {
         manufacturer: 'Volkswagen',
         model: 'Golf',
-        type: 'benzina'
+        type: 'Benzina'
     },
     {
         manufacturer: 'Fiat',
@@ -50,28 +50,29 @@ const cars = [
     {
         manufacturer: 'Ford',
         model: 'Kuga',
-        type: 'diesel'
+        type: 'Diesel'
     },
     {
         manufacturer: 'Seat',
         model: 'Ibiza',
         type: 'metano'
-    }, //manca una virgola 
+    },
     {
         manufacturer: 'Audi',
         model: 'R8',
-        type: 'benzina' //benzina
+        type: 'Benzina'
     },
 ];
 
-const gasolineCars = cars.filter( (auto) => auto.type === 'benzina'); //=>
+const gasolineCars = cars.filter( (auto) => auto.type.toLowerCase() === 'benzina');
 
 const dieselCars = cars.filter( (auto) => {
-    return auto.type === 'diesel';
+   return auto.type.toLowerCase() === 'diesel';
+    
 });
 
 const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'benzina' && auto.type !== 'diesel'; //&&al posto dell||
+    return auto.type.toLowerCase() !== 'benzina' && auto.type.toLowerCase() !== 'diesel';
 });
 
 console.log('Auto a benzina');
@@ -84,3 +85,16 @@ console.log(dieselCars);
 
 console.log('Tutte le altre auto');
 console.log(otherCars);
+
+    // 1- Che cosa fa questo codice? dato un array di oggetti (macchina) cerca all'iterno di questo array tutte le macchine e le divede a seconda della tipologia, stampando un array in console 
+    
+
+    // 2- Sono presenti errori di sintassi?
+    // 1) riga 59: mancava una virgolatra un oggetto e l'altro 
+    // 2) riga 67: arrow fanction scritto male 
+    // 3) riga 74: && invece che ||
+    // 4) riga 67: inctrementare con toLowerCase()
+    // 5) riga 70: mancava il return 
+    // 6)
+
+    // 3- Sono presenti errori logici?

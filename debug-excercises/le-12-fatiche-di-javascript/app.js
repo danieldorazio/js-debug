@@ -1,24 +1,24 @@
 const input = document.querySelector('input');
-const array = []; //valore di array ivece che null
+const array = [];
 
-input.addEventListener('keypress', function(event) {
+input.addEventListener('keypress', function(event) {  //ad ogni click della tastiera parte la funzione
 
     if (event.code != 'Enter')    return;
-    if (input.value.length == 0) return;  //comparazione con la stringa 
+    if (input.value.length == '') return;
 
-    array.push(input.value);  //add non va con gli array
+    array.push(input.value);
 
     const li = document.createElement('li');
     li.classList.add('list-group-item');
-    li.innerHTML = input.value;  //invece che text, innerHTML
-    document.querySelector('ul').append(li); //mettere append invece che push
+    li.innerHTML = input.value;
+    document.querySelector('ul').append(li);
 
-    let counter = 0; //il conter deve essere un numero da incrementare no una striga 
+    let counter = '';
     let item    = array[0];
-    let max   = 1;  //la costante max cambia quindi let 
+    const max   = 1;
     const elems = [];
 
-    for (let i = 0; i < array.length; i++) {  //mancava il punto length
+    for (let i = 0; i < array; i++) {
         let val = array[i];
 
         if (!elems[val]) {
@@ -27,20 +27,19 @@ input.addEventListener('keypress', function(event) {
             elems[val]++;
         }
 
-        for (let j = i; j < array.length; j++) {  //non deve essere i ma j ad incrementare 
+        for (let j = i; j < array.length; i++) {
             if (array[i] == array[j]) {
                 counter++;
-                if (max < counter) {  //manacavano le parentesi graffe 
+                if (max < counter)
                 max  = counter;
                 item = array[i];
-                }
             }
         }
 
         counter = 0;
     }
 
-    const alert = document.querySelector('.alert');  //inerire querySelector
+    const alert = document.querySelector('.alert');
 
     alert.classList.remove('d-none');
     alert.classList.add('d-flex');
@@ -48,5 +47,20 @@ input.addEventListener('keypress', function(event) {
     alert.querySelector('span:first-child').innerText = item;
     alert.querySelector('span:last-child').innerText = max;
 
-    console.log(`${item} trovato ${max} volte`); //da utilizzare becktick
+    console.log(`${item} trovato ${max} volte`);
 });
+
+
+// che cosa fa?
+//  1)  riga 2: array null => []
+//  2) riga 13: .text => .innerHTML
+//  3) riga 14: .push => .append
+//  4)  riga 9: .add => .push
+//  5) riga 50: "" => ``
+//  6) riga 42: getElementsByClassName => querySelector
+//  7) 
+//  8)
+//  9)
+// 10) 
+// 11) 
+// 12)
